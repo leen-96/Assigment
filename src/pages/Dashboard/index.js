@@ -21,7 +21,7 @@ const Dashboard = () => {
   const actionTemplate = (rowData) => {
     return (
       <div onClick={() =>{const ll =console.log(rowData.cca2)} }>
-        <Link to="/details">
+        <Link to={"/details?code=" + rowData.cca2}>
           <AiIcons.AiFillEye/>
           </Link>
           </div>
