@@ -1,12 +1,17 @@
 import React, { Fragment } from "react";
 import axios from "axios";
-import { baseUri } from "./endpoints"; 
+import { baseUri,baseUriCode } from "./endpoints"; 
 import { toast } from "react-toastify";
 import { ToastBody } from "reactstrap";
 
  
 export const apiService = axios.create({
   baseURL: baseUri,
+
+});
+export const apiServicedetails = axios.create({
+  baseURL: baseUriCode,
+  
 });
 
 const requestInterceptor = (config) => {

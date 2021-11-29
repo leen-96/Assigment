@@ -7,16 +7,22 @@ import { loadData, showData } from '../../Redux/slices/countryRedux/actions';
 import { countryData } from '../../Redux/slices/countryRedux/selectors';
 import * as AiIcons from 'react-icons/ai';
 import { Link } from "react-router-dom";
-import { baseUri } from "../../Services/endpoints";
+import { baseUri, baseUriCode } from "../../Services/endpoints";
 
 
 
 
 const Details= () => {
   const dispatch = useDispatch(),
+
   data = useSelector((state) => countryData({ state }));
+  const windowUrl = window.location.search;
+  const params = new URLSearchParams(windowUrl)
+  const url = "https://restcountries.com/v3.1/alpha/" + params.get("code")
+  console.log(url)
   useEffect(() => {
-     dispatch(showData(baseUri))
+     dispatch(showData( url))
+
   }, []);
 
 

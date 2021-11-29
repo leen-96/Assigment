@@ -1,5 +1,5 @@
 import { LOAD_DATA_REQUEST, LOAD_DATA_SUCCESS, LOAD_DATA_FAILURE }  from "./types";
-import { apiService } from "../../../Services/axios";
+import { apiService, apiServicedetails } from "../../../Services/axios";
 
 export const loadData = () => async (dispatch) => {
   dispatch({
@@ -24,7 +24,7 @@ export const showData = (code) => async (dispatch) => {
     type: LOAD_DATA_REQUEST,
   });
   try {
-    const response = await apiService({
+    const response = await apiServicedetails({
       method: 'GET',
       url: code
     });
