@@ -1,0 +1,1 @@
+export const countryData = ({ state }) => state.countryReducer.data;

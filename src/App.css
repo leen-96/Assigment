@@ -1,38 +1,377 @@
-.App {
+@import '../node_modules/@syncfusion/ej2-base/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-buttons/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-calendars/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-dropdowns/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-inputs/styles/material.css';  
+@import '../node_modules/@syncfusion/ej2-navigations/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-popups/styles/material.css';
+@import '../node_modules/@syncfusion/ej2-splitbuttons/styles/material.css';
+@import "../node_modules/@syncfusion/ej2-react-grids/styles/material.css";
+@font-face {
+  font-family: "Rubik-Regular";
+  src: local("☺️"), url("./asset/fonts/Rubik-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "Rubik-Bold";
+  src: local("☺️"), url("./asset/fonts/Rubik-Bold.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+@font-face {
+  font-family: "FontAwesome";
+  src: url("./asset/fonts/fontawesome.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+:root {
+  --font-main: "Rubik-Regular";
+  --red-color: #e52727;
+  --black-color: rgb(0, 0, 0);
+  --dark-grey: rgba(0, 0, 0, 0.8);
+  --dark-grey-2: #000000a6;
+  --white-color: #ffff;
+  --default-color:#FAFAFA;
+  --white2-color: #fafafa;
+  --grey-color: #818181;
+  --grey2-color: #9e9e9e;
+  --grey3-color: #e8e8e8;
+  --light-grey: #eae8e8;
+  --offred-color: #fcc;
+  --yello-color: #ffc107;
+  --green-color: rgba(140, 173, 124, 1);
+  --green-back: #e2f2da;
+  --green-light:rgba(45, 185, 92, 1);
+  --orange:rgba(225, 176, 50, 1);
+  --liner-red:rgba(246, 100, 100, 1);
+  --liner-blue:rgba(36, 189, 199, 1);
+  --liner-green:rgba(30, 216, 151, 1);
+  --liner-grey:rgba(132, 135, 143, 1);
+  --main-title: 40px;
+  --subtitle-size: 19px;
+  --main-title-size: 55px;
+  --card-s-title: 20px;
+  --title-2-size: 17px;
+  --title-3-size: 22px;
+  --para-size: 15px;
+  --para2-size: 18px;
+  --para3-size: 16px;
+  --para4-size: 14px;
+  --xm-size: 10px;
+  --sm-size: 12px;
+  --sm-2-size: 13px;
+  --md-size: 25px;
+  --num-font-size:50px;
+}
+body {
+  margin: 0;
+  font-family: var(--font-main)!important;
+  font-size: 1rem;
+  font-weight: 400;
+  line-height: 1.5;
+  color: #212529;
+  background-color: var(--default-color)!important;
+  -webkit-text-size-adjust: 100%;
+  -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+}
+.fa {
+  display: inline-block;
+  font: normal normal normal 14px/1 FontAwesome;
+  text-rendering: auto;
+  -webkit-font-smoothing: antialiased;
+}
+.btn-danger {
+  background-color: var(--red-color);
+  border-radius: 2px;
+  box-shadow: none !important;
+  outline: none !important;
+  font-weight: 500;
+  line-height: 19px;
+}
+.p-16 {
+  padding: 16px;
+}
+
+.p-10 {
+  padding: 10px;
+}
+.text-red {
+  color: var(--red-color);
+}
+.text-grey-2 {
+  color: #000;
+  opacity: 0.9;
+}
+.cursor-pointer {
+  cursor: pointer;
+}
+
+.cursor-default {
+  cursor: default !important;
+}
+
+.box-shadow-none {
+  box-shadow: none !important;
+}
+.text-grey {
+  color: var(--grey-color);
+}
+.white-1 {
+  color: var(--white-color);
+}
+.white-bac{
+  background-color:var(--white-color);
+}
+.black-1 {
+  color: var(--dark-grey);
+}
+.d-gery {
+  color: var(--dark-grey-2);
+}
+.grey-1 {
+  color: var(--grey-color);
+}
+.grey-2 {
+  color: var(--grey2-color);
+}
+.yellow-1 {
+  color: var(--yello-color);
+}
+.green-1 {
+  color: var(--green-color);
+}
+.red-bac{
+  background-color: var( --red-color);
+
+}
+.back-lgrey {
+  background-color: var(--light-grey);
+}
+.green-back {
+  background-color: var(--green-back);
+}
+.back-red-liner{
+  background-color: var(--liner-red)!important;
+
+}
+.back-blue-liner{
+  background-color: var(--liner-blue)!important;
+
+}
+.back-green-liner{
+  background-color: var(--liner-green)!important;
+
+}
+.back-grey-liner{
+  background-color: var(--liner-grey)!important;
+
+}
+.back-liner{
+  background: linear-gradient( 
+90deg , #f8f9fa52 0%, rgba(81,41,43,0) 100%);
+}
+
+
+ 
+.off-red {
+  color: var(--offred-color);
+}
+.font-40 {
+  font-size: var(--main-title);
+}
+.font-50{
+  
+  font-size: var(--num-font-size);
+
+}
+.font-25 {
+  font-size: var(--md-size);
+}
+.font-55 {
+  font-size: var(--main-title-size);
+}
+.font-15 {
+  font-size: var(--para-size);
+}
+.font-14 {
+  font-size: var(--para4-size);
+}
+.font-12 {
+  font-size: var(--sm-size);
+}
+.font-10 {
+  font-size: var(--xm-size);
+}
+.font-20 {
+  font-size: var(--subtitle-size);
+}
+.font-30 {
+  font-size: 30px;
+}
+.font-13 {
+  font-size: var(--sm-2-size);
+}
+.font-16 {
+  font-size: var(--para3-size);
+}
+.font-18 {
+  font-size: var(--para2-size);
+  font-weight: 500;
+  line-height: 1.2;
+}
+.font-20 {
+  font-size: var(--card-s-title);
+}
+.font-17 {
+  font-size: var(--title-2-size);
+}
+.font-22 {
+  font-size: var(--title-3-size);
+}
+.bold {
+  font-weight: bolder !important;
+}
+/* end font */
+.f-flex {
+  flex: 0 0 !important;
+}
+.p-y10 {
+  padding-top: 10px;
+  padding-bottom: 10px;
+}
+.text-right {
+  text-align: right;
+}
+.site-content {
+  display: flex;
+  padding: 0 60px;
+}
+.ml-60 {
+  margin-left: 60px;
+}
+.mb-22 {
+  margin-bottom: 2rem;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.ml-0 {
+  margin-left: 0 !important;
+}
+.ml-1 {
+  margin-left: 0.5rem;
+}
+.ml-15 {
+  margin-left: 15px;
+  margin-right: 15px;
+}
+.plr-1 {
+  padding-right: 1rem;
+}
+.py-11 {
+  padding-top: 0.6rem;
+  padding-bottom: 0.6rem;
+}
+.mt-22 {
+  margin-top: 2rem;
+}
+ 
+.justify-center {
+  justify-content: center;
+}
+ 
+.space-between {
+  justify-content: space-between;
+}
+.b-botom {
+  border-bottom: 1px solid rgba(0, 0, 0, 0.3);
+}
+.no-underline {
+  text-decoration: none;
+}
+.no-list {
+  list-style: none;
+}
+.center-text {
   text-align: center;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.card-shadow {
+  box-shadow: 0 15px 13px rgb(0 0 0 / 12%), 0 3px 1px rgb(0 0 0 / 1%);
+}
+.text-left{
+  text-align: left;
+}
+.no-list-style {
+  list-style: none;
+}
+.pl-0 {
+  padding-left: 0;
+}
+.mb-1 {
+  margin-bottom: 1rem;
+}
+.ml-0 {
+  margin-left: 0 !important;
+}
+/* ................. */
+.click-name {
+  background: darkorange;
+	list-style: none;
+	margin: 0;
+	padding-left: 0;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.sub-click-name {
+  display: block;
+  padding: 1rem;
+  text-align: center;
+  border-radius: 11px;
+  float: left;
+  background: antiquewhite;
+  position: relative;
+  text-decoration: none;
+  transition-duration: 0.5s;
+}
+  
+.sub-click-name a {
+  /* color: #fff; */
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+.sub-click-name:hover {
+	/* background: red; */
+	cursor: pointer;
 }
 
-.App-link {
-  color: #61dafb;
+.click-name .sub-click-name ul {
+  background: #f9fafb;
+  	visibility: hidden;
+  opacity: 0;
+  min-width: 100%;
+  list-style: none;
+  position: absolute;
+  transition: all 0.5s ease;
+  border-radius: 5px;
+  left: 25px;
+  top: 70px;
+  padding: 1rem;
+  display: none;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.click-name .sub-click-name:hover > ul,
+.click-name .sub-click-name ul:hover {
+  visibility: visible;
+  opacity: 1;
+  z-index: 2;
+  display: block;
+}
+
+.click-name .sub-click-name ul li {
+	clear: both;
+  width: 100%;
+}
+
+.flag-img{
+  width: 50px;
+  height: 50px;
 }
