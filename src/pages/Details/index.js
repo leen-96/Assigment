@@ -33,7 +33,11 @@ const Details= () => {
     )
   }
 
-
+  const currenciesTemplate = (rowData) => {
+    return (
+      <p>{rowData.currencies[Object.keys(rowData.currencies)[0]].name}</p>
+    )
+  }
 
   return (
     <Container>
@@ -49,7 +53,7 @@ const Details= () => {
               <ColumnDirective headerText="Native Name " field="name.official"/>
               <ColumnDirective headerText="numeric code " field="ccn3"/>
 
-              <ColumnDirective headerText="currencies" field="currencies"/>
+              <ColumnDirective headerText="currencies" field="currencies" template={currenciesTemplate} />
               <ColumnDirective headerText="Flag" field="flags.svg" template={flagTemplate}/>
 
 
